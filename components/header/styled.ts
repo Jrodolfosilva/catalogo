@@ -11,7 +11,13 @@ height: 14vh;
 top: 0%;
 z-index: 99;
 background-color: #e5e5e5;
-nav ul {
+nav {
+ display: none;
+ ${({OpenMobile}:any)=>OpenMobile&&`
+ display:block;
+ `}
+ 
+    ul {
     
     display: flex;
     flex-direction: column;
@@ -26,7 +32,7 @@ nav ul {
     background-color: #e5e5e5;
     
 }
-
+}
 
 
 @media (min-width: 1024px) {
@@ -41,6 +47,15 @@ nav ul {
 }
 @media (min-width: 768px) {
     background-color: red;
+}
+
+`
+
+export const Toogle = styled.div`
+display:none;
+
+@media (max-width:768px) {
+    display: block;
 }
 
 

@@ -1,9 +1,11 @@
-import React from "react";
-import {ContainerHeader} from "./styled"
+import React, { useState } from "react";
+import {ContainerHeader,Toogle} from "./styled"
 
 const Header = () =>{
+
+    const [mobile,setMobile] = useState(false)
     return(
-        <ContainerHeader>
+        <ContainerHeader OpenMobile={mobile}>
             <figure>
                 <img src="" alt="LOGO" />
             </figure>
@@ -16,6 +18,12 @@ const Header = () =>{
                     <li>Localização</li>
                 </ul>
             </nav>
+            <Toogle 
+            onClick={()=>setMobile(!mobile)}
+            >
+                <img src="" alt={mobile?"Fechar":"Abrir"} />
+
+            </Toogle>
         </ContainerHeader>
     )
 }
