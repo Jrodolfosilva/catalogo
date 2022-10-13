@@ -9,10 +9,10 @@ position: fixed;
 width: 100%;
 height: 14vh;
 top: 0%;
-z-index: 99;
+z-index: 099;
 background-color: #e5e5e5;
 nav {
- display: none;
+ display:none;
  ${({OpenMobile}:any)=>OpenMobile&&`
  display:block;
  `}
@@ -37,16 +37,19 @@ nav {
 
 @media (min-width: 1024px) {
  padding: 10px 40px;
- nav ul{
-     flex-direction: row;
-     position: static;
-     background-color: transparent;
-     top: auto;
+ nav {
+    display:block;
+    ul{
+    display:block;
+    
  }
- background-color: yellow;
+
 }
+}
+
+
 @media (min-width: 768px) {
-    background-color: red;
+   
 }
 
 `
