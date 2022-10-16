@@ -4,9 +4,6 @@ import {ContainerHeader,Toogle} from "./styled"
 const Header = () =>{
 
     const [mobile,setMobile] = useState(false);
-    /*Testar */
-    const over = document.querySelector('body');
-    mobile?over.style.overflow='hidden':over.style.overflow='visible';
     
     return(
         <ContainerHeader OpenMobile={mobile}>
@@ -16,10 +13,9 @@ const Header = () =>{
             <nav>
                 <ul>
                     <li>Home</li>
-                    <li>Empresa</li>
-                    <li>Produtos</li>
-                    <li>Blog</li>
-                    <li>Localização</li>
+                    <li>Sobre</li>
+                    <li>Serviços</li>
+                    <li>Contato</li>
                 </ul>
             </nav>
             <Toogle 
