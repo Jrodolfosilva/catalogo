@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerHeader =  styled.header`
+
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -11,6 +12,7 @@ height: 14vh;
 top: 0%;
 z-index: 099;
 background-color: #e5e5e5;
+
 nav {
  display:none;
  ${({OpenMobile}:any)=>OpenMobile&&`
@@ -31,25 +33,44 @@ nav {
     text-align: center;
     background-color: #e5e5e5;
     
-}
-}
+    }
+  }
 
 
 @media (min-width: 1024px) {
+
  padding: 10px 40px;
+
  nav {
     display:block;
+
     ul{
-    display:block;
+ 
+    flex-direction: row;
+    position: static;
+    top: 0vh;
+    right: 0%;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    padding: 0px;
+
+
+    li{
+        cursor:pointer;
+        padding:6px;
+    }
     
  }
 
 }
 }
-
+/*colocar a configuração do desktop para o tablet */
 
 @media (min-width: 768px) {
-   
+   nav{
+    display:flex;
+   }
 }
 
 `
